@@ -1,44 +1,30 @@
 public class Calculator{
-int num1;
-int num2;
-public static void add(){
-int num1=10;
-int num2=2;
-int answer1;
-answer1=num1+num2;
-System.out.println("sum=" +answer1);
+static int num1=10;
+static int num2=2;
+static int answer;
+public Calculator(){
 }
-public static void subt(){
-int num1=10;
-int num2=2;
-int answer2;
-answer2=num1-num2;
-System.out.println("difference=" +answer2);
+public static int add(){
+answer=num1+num2;
+return answer;
 }
-public static void mult(){
-int num1=10;
-int num2=2;
-int answer3;
-answer3=num1*num2;
-System.out.println("multiple=" +answer3);
+public int subt(){
+answer=num1-num2;
+return answer;
 }
-public static void divide(){
-int num1=10;
-int num2=2;
-int answer;
+public int mult(){
+answer=num1*num2;
+return answer;
+}
+public int divide(){
 answer=num1/num2;
-System.out.println("num1/num2=" +answer);
+return answer;
 }
 public Calculator(int num1, int num2){
-this.num1=num1;
-this.num2=num2;
 }
 public static void main(String[]args){
-add();
-subt();
-mult();
-divide();
 Calculator c=new Calculator(10,2);
+add();
 System.out.println(c);
 }
 }
